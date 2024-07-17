@@ -6,7 +6,6 @@ function closest(arr) {
         return 0;
     }
     let closest = arr[0];
-
     for (let i = 1; i < arr.length; i++) {
         let temp = arr[i];
         if (Math.abs(temp) < Math.abs(closest) || (Math.abs(temp) === Math.abs(closest) && temp > closest)) {
