@@ -1,15 +1,19 @@
-const n = parseInt(readline());
-const temps = readline().split(' ')
+const n = parseInt(readline()); 
+const inputs = readline().split(' ').map(Number);
 
-if (n === 0) {
-    console.log(0);
-} else {
-    let closestTemp = null;
-    
-    temps.forEach(temp => {
-        if (closestTemp === null || Math.abs(temp) < Math.abs(closestTemp) || (Math.abs(temp) === Math.abs(closestTemp) && temp > closestTemp)) {
-            closestTemp = temp;
+function closest(arr) {
+    if (arr.length === 0) {
+        return 0;
+    }
+    let closest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        let temp = arr[i];
+        if (Math.abs(temp) < Math.abs(closest) || (Math.abs(temp) === Math.abs(closest) && temp > closest)) {
+            closest = temp;
         }
-    });
-    console.log(closestTemp);
+    }
+    return closest;
 }
+const result = closest(inputs);
+console.log(result); 
