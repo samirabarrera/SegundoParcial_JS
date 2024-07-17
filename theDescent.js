@@ -4,10 +4,10 @@ while (true) {
     let targetMountain = 0; 
 
     for (let i = 0; i < 8; i++) {
-        const mountainHeigth = parseInt(readline()); 
+        const mountainH = parseInt(readline()); 
 
-        if (mountainHeigth > heightMountain) {
-            heightMountain = mountainHeigth;
+        if (mountainH > heightMountain) {
+            heightMountain = mountainH;
             targetMountain = i;
         }
     }
